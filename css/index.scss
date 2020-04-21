@@ -1,0 +1,386 @@
+$font-color: #707070;
+$color-pink: #FF86A7;
+
+* {
+    margin: 0;
+    font-family: montserrat;
+}
+.watermark {
+    font-size: 27rem;
+    position: absolute;
+    opacity: .08;
+    z-index: -1;
+    line-height: 90%;
+    top: 120px;
+}
+.container {
+    position: relative;
+    max-width: 1366px;
+    margin: auto;
+    overflow: hidden;
+}
+nav {
+    margin: .5rem 0;
+    .plane {
+        img {
+        width: 30px;
+        height: 20px;    
+        }       
+    }
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: .5rem;
+        color: $font-color;
+        align-items: center;
+
+        .logo {
+            margin-right: auto;
+            margin-left: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        li {
+            margin-left: 1.5rem;
+
+            :hover {
+                font-weight: bold;
+                transition: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
+
+            a {
+                text-decoration: none;
+                color: $font-color;
+            }
+        }
+    }
+}
+.hero {
+    height: 500px;
+    display: flex;
+
+    .hero-left {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        .pink {
+            position: absolute;
+            height: 25px;
+            width: 150px;
+            background: $color-pink;
+            left: 0;
+            top: 120px;
+            z-index: -1;
+        }
+
+        .hero-text {
+            line-height: 60px;
+            h1 {
+                font-size: 4rem;
+                color: $font-color;
+            }
+            h3 {
+                color: $font-color;
+                font-weight: normal;
+                font-size: 2rem;
+            }
+        }
+
+        button {
+            width: 25%;
+            height: 50px;
+            background-color: $color-pink;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            transform: translatey(20px);
+        }
+    }
+
+    .hero-right {
+        background: url('../assets/des3.jpeg');
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+.section {
+    position: relative;
+    margin-top:.5rem;
+    .with-pink {
+        display: flex;
+
+        .pink {
+            width: 400px;
+            background-color: $color-pink;
+            margin-right: auto;
+            height: 30px;
+            align-self: center;
+            z-index: -1;
+        }
+        h1 {
+            width: 100%;
+            text-align: right;
+            color: $font-color;
+            font-weight: normal;
+            font-size: 3rem;
+            padding: .5rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.section-main {
+    display: flex;
+    min-height: 400px;
+    .section-left {
+        background: url('../assets/des1.jpeg');
+        width: 100%;
+        min-height: 400px;
+        margin-left: auto;
+        background-size: cover;
+        background-position: center center;
+    }
+    .section-right {
+        width: 600px;
+        padding: 2rem;
+        padding-top: 0;
+        position: relative;
+
+        h3 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            color: $font-color;
+            margin-bottom: 1rem;
+
+        }
+        p {
+            color: $font-color;
+            font-size: 1.1rem;
+        }
+        .pink {
+            width: 100px;
+            height: 30px;
+            background: $color-pink;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            z-index: -1;
+        }
+    }
+}
+.featured-section{
+    height: 600px;
+    display: flex;
+}
+
+.feat{
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: .6s;
+    filter: grayscale(80%);
+    transition: .4s;
+}
+.feat1 {
+    background: url("../assets/featured/feat1.jpg");
+    background-size: cover;
+}
+.feat2 {
+    background: url("../assets/featured/feat2.jpg");
+    background-size: cover;
+}
+.feat3 {
+    background: url("../assets/featured/feat3.jpg");
+    background-size: cover;
+}
+.feat4 {
+    background: url("../assets/featured/feat4.jpg");
+    background-size: cover;
+}
+
+.feat:hover{
+    flex: 3;
+    filter: grayscale(0);
+}
+.featured {
+    .featured-title{
+        position: relative;
+
+        .pink {
+            width: 300px;
+            height: 40px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            background: $color-pink;
+            z-index: -1;
+        }
+        h1 {
+            text-align: center;
+            padding: 1rem;
+            color: $font-color;
+            font-size: 3rem;
+            font-weight: normal;
+        }
+    }
+
+}
+.footer {
+    display: flex;
+    min-height: 300px;
+    padding: 1rem;
+    position: relative;
+    .footer-left {
+        flex: 1 1 0;
+        display: flex;
+
+        .footer-left-left {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            padding-top: 0;
+                .foot-logo {
+                margin-right: auto;
+                margin-left: none;
+                font-weight: bold;
+                font-size: 1.5rem;
+                color: $font-color;
+                flex: 1 1 0;
+
+                    img {
+                        width: 30px;
+                        height: 20px;
+                    }
+                }
+
+            .email {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                flex: 1 1 0;
+            }
+            .social {
+                width: 100%;
+                margin-left: 0;
+               ul{
+                   display: flex;
+                   list-style-type: none;
+                   align-content: space-between;
+                   font-size: 2rem;
+                   color: $font-color;
+                   padding: 0;
+
+                   li {
+                       padding-right: 1rem;
+                   }
+                }
+                
+            }
+        }
+        .footer-left-right {
+            display: flex;
+            flex-direction: column;
+            
+            .location,.contact-num,.contact-email{
+                margin: 1rem;
+                display: flex;
+                align-content: space-between;
+
+                i {
+                    padding: .5rem;
+                    font-size: 1.5rem;
+                    margin: .5rem;
+                    color: $font-color;
+                    flex: 1 1 0;
+                }
+                .cont {
+                    flex: 5 5 0;
+                    
+                }
+            }
+        }
+    }
+    .footer-right {
+        flex: 1 1 0;
+        background: $color-pink;
+        color: white;
+        padding: 1rem;
+    }
+}
+.footer-bottom {
+    width: 100%;
+    background: #f4f4f4;
+    text-align: center;
+    padding: .5rem;
+    color: $font-color;
+    font-weight: 500;
+}
+.watermark-foot {
+    font-size: 25rem;
+    position: absolute;
+    opacity: .08;
+    z-index: -1;
+    line-height: 90%;
+    top: 0px;
+    left: -100px;
+}
+
+// input
+form {
+  }
+  .input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: $color-pink;
+    transition: 0.2s all;
+    cursor: text;
+  }
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid $color-pink;
+    box-shadow: none;
+    color: #111;
+  }
+  input:invalid {
+    outline: 0;
+    // color: #ff2300;
+    //   border-color: #ff2300;
+  }
+  input:focus,
+  input:valid {
+    border-color: $color-pink;
+  }
+  input:focus~label,
+  input:valid~label {
+    font-size: 14px;
+    top: -24px;
+    color: $color-pink;
+  }
+
+//   input
+
+.subscribe {
+    width: 120px;
+    height: 30px;
+    background: #FF356C;
+    border: 0;
+    color: white;
+}
