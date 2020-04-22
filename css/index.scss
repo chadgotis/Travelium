@@ -1,3 +1,5 @@
+@import './breakpoints.scss';
+
 $font-color: #707070;
 $color-pink: #FF86A7;
 
@@ -12,6 +14,10 @@ $color-pink: #FF86A7;
     z-index: -1;
     line-height: 90%;
     top: 120px;
+    @include media('<=phone'){
+        font-size: 20rem;
+        top: 70px;
+    }
 }
 .container {
     position: relative;
@@ -24,7 +30,11 @@ nav {
     .plane {
         img {
         width: 30px;
-        height: 20px;    
+        height: 20px;  
+            @include media('<=phone'){
+                width: 25px;
+                height: 15px;
+            }  
         }       
     }
     ul {
@@ -39,6 +49,10 @@ nav {
             margin-left: none;
             font-weight: bold;
             font-size: 1.5rem;
+            @include media('<=tablet'){
+                font-size: 1.3rem;
+                margin-left: 0;
+            }
         }
         li {
             margin-left: 1.5rem;
@@ -51,6 +65,9 @@ nav {
             a {
                 text-decoration: none;
                 color: $font-color;
+                @include media('<=phone'){
+                    display: none;
+                }
             }
         }
     }
@@ -58,6 +75,9 @@ nav {
 .hero {
     height: 500px;
     display: flex;
+    @include media('<=phone'){
+        height: 300px;
+    }
 
     .hero-left {
         width: 80%;
@@ -66,6 +86,11 @@ nav {
         align-items: center;
         flex-direction: column;
         position: relative;
+            @include media('<=phone'){
+                flex: 0 0 100%;
+                text-align: center;
+                height: 300px;
+            }
 
         .pink {
             position: absolute;
@@ -75,18 +100,30 @@ nav {
             left: 0;
             top: 120px;
             z-index: -1;
+            @include media('<=phone'){
+                top: 40px;
+            }
         }
 
         .hero-text {
             line-height: 60px;
+            @include media('<=phone'){
+               line-height: 40px;
+            }
             h1 {
                 font-size: 4rem;
                 color: $font-color;
+                @include media('<=phone'){
+                    font-size: 2.2rem;
+                }
             }
             h3 {
                 color: $font-color;
                 font-weight: normal;
                 font-size: 2rem;
+                @include media('<=phone'){
+                    font-size: 1rem;
+                }
             }
         }
 
@@ -98,6 +135,10 @@ nav {
             color: white;
             font-size: 1rem;
             transform: translatey(20px);
+            @include media('<=phone'){
+                width: 50%;
+                height: 40px;
+            }
         }
     }
 
@@ -108,30 +149,47 @@ nav {
         margin-left: auto;
         background-size: cover;
         background-position: center center;
+
+        @include media('<=phone'){
+           display: none;
+           flex: 0 0 0;
+        }
     }
 }
 .section {
     position: relative;
     margin-top:.5rem;
     .with-pink {
-        display: flex;
-
+        position: relative;
+        margin-right: 1rem;
         .pink {
-            width: 400px;
+            width: 20%;
             background-color: $color-pink;
             margin-right: auto;
             height: 30px;
             align-self: center;
             z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 25px;
+            @include media('<=phone'){
+                top: 10px;
+                width: 5%;
+            }
         }
         h1 {
             width: 100%;
             text-align: right;
             color: $font-color;
             font-weight: normal;
-            font-size: 3rem;
+            font-size: 4rem;
             padding: .5rem;
-            margin-right: 1rem;
+            margin-right: 2rem;
+            padding-right: 1rem;
+            @include media('<=phone'){
+                font-size: 1.5rem;
+                width: 100%;
+            }
         }
     }
 }
@@ -139,6 +197,9 @@ nav {
 .section-main {
     display: flex;
     min-height: 400px;
+    @include media('<=phone'){
+        flex-wrap: wrap;
+    }
     .section-left {
         background: url('../assets/des1.jpeg');
         width: 100%;
@@ -152,17 +213,27 @@ nav {
         padding: 2rem;
         padding-top: 0;
         position: relative;
+        @include media('<=phone'){
+           padding-bottom: 0;
+        }
 
         h3 {
             font-size: 2.5rem;
             font-weight: normal;
             color: $font-color;
             margin-bottom: 1rem;
+            @include media('<=phone'){
+                font-size: 1.8rem;
+                margin-top: 1rem;
+            }
 
         }
         p {
             color: $font-color;
             font-size: 1.1rem;
+            @include media('<=phone'){
+                font-size: .9rem;
+            }
         }
         .pink {
             width: 100px;
@@ -172,12 +243,18 @@ nav {
             top: 10px;
             right: 0;
             z-index: -1;
+            @include media('<=phone'){
+                top: 20px;
+            }
         }
     }
 }
 .featured-section{
     height: 600px;
     display: flex;
+    @include media('<=phone'){
+        height: 300px;
+    }
 }
 
 .feat{
@@ -188,6 +265,7 @@ nav {
     transition: .6s;
     filter: grayscale(80%);
     transition: .4s;
+    
 }
 .feat1 {
     background: url("../assets/featured/feat1.jpg");
@@ -222,6 +300,11 @@ nav {
             left: 0;
             background: $color-pink;
             z-index: -1;
+            @include media('<=phone'){
+                top: 0px;
+                width: 200px;
+                height: 20px;
+            }
         }
         h1 {
             text-align: center;
@@ -229,6 +312,9 @@ nav {
             color: $font-color;
             font-size: 3rem;
             font-weight: normal;
+            @include media('<=phone'){
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -238,15 +324,22 @@ nav {
     min-height: 300px;
     padding: 1rem;
     position: relative;
+    @include media('<=phone'){
+        flex-wrap: wrap-reverse;
+    }
     .footer-left {
         flex: 1 1 0;
         display: flex;
+        @include media('<=phone'){
+            flex-wrap: wrap-reverse;
+        }
 
         .footer-left-left {
             display: flex;
             flex-direction: column;
             padding: 1rem;
             padding-top: 0;
+            margin: 2rem 0;
                 .foot-logo {
                 margin-right: auto;
                 margin-left: none;
@@ -254,6 +347,9 @@ nav {
                 font-size: 1.5rem;
                 color: $font-color;
                 flex: 1 1 0;
+                @include media('<=phone'){
+                    flex: 0 0 10%;
+                }
 
                     img {
                         width: 30px;
@@ -265,6 +361,9 @@ nav {
                 margin-top: 1rem;
                 margin-bottom: 1rem;
                 flex: 1 1 0;
+                @include media('<=phone'){
+                    flex: 0 0 80%;
+                }
             }
             .social {
                 width: 100%;
@@ -291,7 +390,12 @@ nav {
             .location,.contact-num,.contact-email{
                 margin: 1rem;
                 display: flex;
-                align-content: space-between;
+                align-content: space-betweecen;
+                @include media('<=phone'){
+                    font-size: .9rem;
+                    align-content: center;
+                    justify-content: center;
+                }
 
                 i {
                     padding: .5rem;
@@ -299,6 +403,11 @@ nav {
                     margin: .5rem;
                     color: $font-color;
                     flex: 1 1 0;
+                    @include media('<=phone'){
+                        flex-wrap: wrap;
+                        padding: .2rem;
+                        font-size: 1rem;
+                    }
                 }
                 .cont {
                     flex: 5 5 0;
@@ -312,6 +421,13 @@ nav {
         background: $color-pink;
         color: white;
         padding: 1rem;
+
+        @include media('<=phone'){
+            h3 {
+                text-align: center;
+                margin-bottom: .5rem;
+            }
+        }
     }
 }
 .footer-bottom {
@@ -321,6 +437,10 @@ nav {
     padding: .5rem;
     color: $font-color;
     font-weight: 500;
+    @include media('<=phone'){
+        font-size: .5rem;
+        margin-top: .5rem;
+    }
 }
 .watermark-foot {
     font-size: 25rem;
