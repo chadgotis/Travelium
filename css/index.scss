@@ -386,6 +386,7 @@ nav {
         .footer-left-right {
             display: flex;
             flex-direction: column;
+            width: 100%;
             
             .location,.contact-num,.contact-email{
                 margin: 1rem;
