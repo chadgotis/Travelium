@@ -4,4 +4,5 @@ window.addEventListener("load", () => {
 
     gsap.from(".hero-right", {duration: 1, x: 300, opacity: 0});
     gsap.from(".watermark", {duration: 2, x: -300, opacity: 0});
+    
   });
